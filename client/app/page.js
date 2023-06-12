@@ -1,7 +1,10 @@
+export const metadata = {
+	title: 'Doc Connect | Home',
+	description: 'Doc Connect community',
+}
+
 export default function Home() {
 	return (
-		<main>
-			Home
-		</main>
+		<div>Home page</div>	
 	)
 }
