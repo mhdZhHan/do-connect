@@ -1,0 +1,27 @@
+// light mode
+:root {
+    --light_color:#E9E9E9;
+    --light_bg:#F8F8F8;
+    --black:#454545;
+    --white:#fff;
+    --gray: #909090;
+    --border:.1rem solid rgba(0,0,0,.2);
+}
+
+// dark mode 
+.dark {
+    --light_color:#aaa;
+    --light_bg:#333;
+    --black:#fff;
+    --white:#222;
+    --gray: #909090;
+    --border:.1rem solid rgba(255,255,255,.2);
+}
+
+$main_color: #16a085;
+$green:#3B685D;
+$light_color: var(--light_color);
+$light_bg: var(--light_bg);
+$black: var(--black);
+$white: var(--white);
+$border: var(--border);
