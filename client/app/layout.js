@@ -4,7 +4,7 @@ import '../styles/global.scss'
 import { Header, Sidebar, Footer } from "@/components"
 
 export default function RootLayout({ children }) {
-	const [isSidebarOpen, setIsSidebarOpen] = useState(true)
+	const [isSidebarOpen, setIsSidebarOpen] = useState(false)
 
 	const toggleSidebar = () => {
 	  setIsSidebarOpen(!isSidebarOpen)
@@ -12,7 +12,7 @@ export default function RootLayout({ children }) {
 
 	return (
 		<html lang="en">
-			<body className='layout'>
+			<body className='layout light'>
 				<div className="layout__container" >
 					<Header isSidebarOpen={isSidebarOpen} toggleSidebar={toggleSidebar} />
 					<Sidebar isSidebarOpen={isSidebarOpen} />

@@ -1,28 +1,23 @@
-"use client"
-import Image from 'next/image'
+import { BiSearchAlt2 } from 'react-icons/bi'
+import styles from '../styles/components/banner.module.scss'
 
 function HomeBanner() {
     return (
-        <div className="banner-container">
-            <h1 className="banner-container__title">
+        <div className={styles.banner_container}>
+            <h1 className={styles.banner_container__title}>
                 Welcome to our community
             </h1>
-            <h2 className="banner-container__subtitle">
-                We're happy to have you here. If you need help, please search before you post.
+            <h2 className={styles.banner_container__subtitle}>
+                Welcome! Please search before posting
             </h2>
-            <div className="banner-container__search-box">
-                <input type="text" className="banner-container__search-box__input" />
-                <Image />
+            <div className={styles.banner_container__search_box}>
+                <input 
+                    type="text" 
+                    className={styles.banner_container__search_box__input} 
+                    placeholder='Search'
+                />
+                <BiSearchAlt2 size={30} color='#909090' />
             </div>
-
-            {/* style */}
-            <style jsx>{`
-                .banner-container {
-                    h1 {
-                        color: red;
-                    }   
-                }
-            `}</style>
         </div>
     )
 }

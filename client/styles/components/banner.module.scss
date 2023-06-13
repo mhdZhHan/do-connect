@@ -1,0 +1,44 @@
+@use '../variables' as *;    
+
+.banner_container {
+    width: 100%;
+    padding: 3rem;
+    border-radius: .6rem;
+    background: linear-gradient(128deg, rgb(24, 226, 179) 70%, rgb(0, 212, 255) 100%);
+    box-shadow: rgba(99,99,99,.2) 0px 2px 8px 0px;
+}
+
+.banner_container__title {
+    font-size: 4rem;
+    text-align: center;
+    margin-bottom: 2rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: teal;
+}
+
+.banner_container__subtitle {
+    text-align: center;
+    font-size: 2rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: teal;
+    margin-bottom: 2rem;
+}
+
+.banner_container__search_box {
+    position: relative;
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    background-color: $white;
+    padding: 2rem;
+    border-radius: .8rem;
+}
+
+.banner_container__search_box__input {
+    width: 100%;
+    color: $black;
+    font-size: 1.8rem;
+    font-weight: 500;
+}
