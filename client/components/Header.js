@@ -13,7 +13,7 @@ const Header = ({ toggleSidebar, isSidebarOpen }) => {
                     >
                         <FiMenu size={30} style={{ cursor: 'pointer' }} />
                     </div>
-                    <h1 className="header-container__logo"><Link href="/">DocConnect</Link></h1>
+                    <h1 className="header-container__logo"><Link href="/">DoConnect</Link></h1>
                 </div>
                 <div className="header-container__right">
                     <div className="profile">
