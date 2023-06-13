@@ -13,7 +13,7 @@ const CreateButton = () => {
             display: 'flex',
             alignItems: 'center',
             padding: '1rem',
-            borderRadius: '.8rem',
+            borderRadius: '1rem',
             cursor: 'pointer'
         }}>
             <FaPlus size={25} color='#fff' />
