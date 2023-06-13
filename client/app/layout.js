@@ -1,7 +1,7 @@
 "use client"
 import { useState } from 'react'
 import '../styles/global.scss'
-import { Header, Sidebar, Footer } from "@/components"
+import { Header, Sidebar, Footer, CreateButton } from "@/components"
 
 export default function RootLayout({ children }) {
 	const [isSidebarOpen, setIsSidebarOpen] = useState(false)
@@ -19,6 +19,7 @@ export default function RootLayout({ children }) {
 					<main className={`layout__main ${isSidebarOpen ? `layout__wrapper` :``}`}>{ children }</main>
 				</div>
 				<Footer />
+				<CreateButton />
 			</body>
 		</html>
 	)
