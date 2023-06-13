@@ -49,6 +49,13 @@ body {
     background-color: $white;
 }
 
+.layout__wrapper {
+    max-width: 1300px;
+    width: 95%;
+    margin: 0 auto;
+    transition: all 0.2s linear;
+}
+
 .hr-line {
     border-bottom: 1px solid #333333;
 }
@@ -103,6 +110,11 @@ body {
     background-color: $white;
 }
 
+.layout__main.layout__wrapper {
+    grid-column: 1 / span 2;
+    padding: 2rem 0;
+}
+
 .layout__footer {
     background-color: $black;
     color: $white;
@@ -118,6 +130,8 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
+
+    transition: all 0.2s linear;
 
     .heder-container__left {
         display: flex;

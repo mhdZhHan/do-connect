@@ -2,10 +2,10 @@
 import Link from "next/link"
 import { FiMenu } from 'react-icons/fi'
 
-const Header = ({ toggleSidebar }) => {
+const Header = ({ toggleSidebar, isSidebarOpen }) => {
     return (
         <header className="layout__header">
-            <div className="header-container">
+            <div className={`header-container ${isSidebarOpen ? `layout__wrapper` :``}`}>
                 <div className="heder-container__left">
                     <div 
                         className="header-container__menu-icon" 
