@@ -295,20 +295,29 @@ body {
 
 .footer-container {
     width: 100%;
-    padding: 2rem 0;
-    .footer-container__left {
-
-    }
+    padding: 2rem 0 0 0;
     .footer-container__title {
-        font-size: 2rem;
+        font-size: 2.5rem;
         color: $white;
         margin-bottom: 2rem;
+        font-weight: 700;
     }
     .footer-container__description {
         font-size: 1.8rem;
         color: $white;
-        max-width: 30rem;
+        max-width: 24rem;
         line-height: 1.5;
         margin-bottom: 2rem;
+        color: $light_color;
+    }
+    .footer-container__credit {
+        font-size: 1.8rem;
+        color: $light_color;
+        text-align: center;
+        margin-top: 2rem;
+    }
+    a {
+        font-size: 1.8rem;
+        color: $main_color;
     }
 }
