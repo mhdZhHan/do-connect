@@ -13,9 +13,18 @@ const Header = ({ toggleSidebar, isSidebarOpen }) => {
                     >
                         <FiMenu size={30} style={{ cursor: 'pointer' }} />
                     </div>
+
                     <h1 className="header-container__logo"><Link href="/">DoConnect</Link></h1>
                 </div>
+                
                 <div className="header-container__right">
+                    <div 
+                        className="header-container__menu-icon" 
+                        onClick={toggleSidebar}
+                    >
+                        <FiMenu size={30} style={{ cursor: 'pointer' }} />
+                    </div>
+
                     <div className="profile">
                         <span>M</span>
                     </div>
