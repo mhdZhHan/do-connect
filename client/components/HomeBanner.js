@@ -1,5 +1,5 @@
 import { BiSearchAlt2 } from 'react-icons/bi'
-import styles from '../styles/components/banner.module.scss'
+import styles from '@/styles/components/banner.module.scss'
 
 function HomeBanner() {
     return (

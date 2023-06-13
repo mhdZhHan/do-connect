@@ -1,6 +1,6 @@
 "use client"
 import { useEffect, useState } from 'react'
-import '../styles/global.scss'
+import '@/styles/global.scss'
 import { Header, Sidebar, Footer, CreateButton } from "@/components"
 
 export default function RootLayout({ children }) {
