@@ -86,10 +86,12 @@ body {
     height: 100%;
     z-index: 3;
 
-    background-color: $light_bg;
     padding: 2rem;
     overflow-y: auto;
     width: 25rem;
+
+    background-color: $light_bg;
+    box-shadow: 0 8px 60px 0 rgba(103,151,255,.1),0 12px 90px 0 rgba(133,255,103,.1);
 
     transform: translateX(0);
     transition: transform, width 0.2s linear;
