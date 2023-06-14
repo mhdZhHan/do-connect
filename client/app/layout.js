@@ -21,7 +21,7 @@ export default function RootLayout({ children }) {
 	return (
 		<html lang="en">
 			<body className='layout light'>
-				<div className="layout__container" >
+				<div className="layout__container">
 					<Header isSidebarOpen={isSidebarOpen} toggleSidebar={toggleSidebar} />
 					<Sidebar isSidebarOpen={isSidebarOpen} />
 					<main className={`layout__main ${isSidebarOpen ? `layout__wrapper` :``}`}>{ children }</main>
