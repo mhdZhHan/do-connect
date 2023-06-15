@@ -1,4 +1,4 @@
-import { HomeBanner } from "@/components"
+import { Banner } from "@/components"
 
 export const metadata = {
 	title: 'Doc Connect | Home',
@@ -8,7 +8,7 @@ export const metadata = {
 export default function Home() {
 	return (
 		<section id="home">
-			<HomeBanner />
+			<Banner />
 		</section>	
 	)
 }

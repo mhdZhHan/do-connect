@@ -1,11 +1,11 @@
-import Header from "./Header"
-import Sidebar from "./Sidebar"
-import Footer from "./Footer"
-import HomeBanner from "./HomeBanner"
-import CreateButton from "./CreateButton"
+import Header from "./layout/Header"
+import Sidebar from "./layout/Sidebar"
+import Footer from "./layout/Footer"
+import Banner from "./home/Banner"
+import CreateButton from "./buttons/CreateButton"
 import AuthForm from "./forms/AuthForm"
 
 export {
     Header, Sidebar, Footer,
-    HomeBanner, CreateButton, AuthForm
+    Banner, CreateButton, AuthForm
 }
