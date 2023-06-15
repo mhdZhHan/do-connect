@@ -213,6 +213,38 @@ body {
                 margin-right: 2rem;
             }
         }
+        .header-container__buttons {
+            display: flex;
+            align-items: center;
+            button {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                background-color: #3b685d;
+                box-shadow: rgba(17, 17, 26, 0.1) 0px 1px 0px;
+
+                padding: .7rem .8rem;
+                margin-right: 2rem;
+                border-radius: .6rem;
+                
+                cursor: pointer;
+                transition: all .25s;
+                span {
+                    &.text {
+                        font-size: 1.3rem;
+                        font-weight: 600;
+                        color: $light_color;
+                    }
+                    &.icon {
+                        margin-right: 0.8rem;
+                    }
+                }
+                &:hover {
+                    opacity: .8;
+                }
+            }
+        }
         .profile {
             width: 4.5rem;
             height: 4.5rem;
@@ -225,11 +257,15 @@ body {
             border-radius: 50%;
             cursor: pointer;
             box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+            transition: all .25s;
             span {
                 font-size: 2rem;
                 display: block;
                 font-weight: 700;
                 color: #fff;
+            }
+            &:hover {
+                opacity: .8;
             }
         }
     }

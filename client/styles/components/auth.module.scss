@@ -1,0 +1,80 @@
+@use '../variables' as *;   
+
+.authFormModel {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1300;
+    overflow: auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .authFormModel__container {
+        z-index: 4;
+        background: $white;
+        width: 50rem;
+        display: flex;
+        flex-direction: column;
+        padding: 3em 3em 2.5em;
+
+        form {
+            .authFormModel__formGroup {
+                position: relative;
+                line-height: 14px;
+                margin: 0 10px;
+                margin-bottom: 2rem;
+                label {
+                    color: #bbb;
+                    font-size: 11px;
+                    text-transform: uppercase;
+                    position: absolute;
+                    z-index: 2;
+                    left: 20px;
+                    top: 14px;
+                    padding: 0 2px;
+                    pointer-events: none;
+                    background: white;
+                    transition: transform 100ms ease;
+                    transform: translateY(-20px);
+                }
+                input {
+                    font-size: 13px;
+                    color: #555;
+                    outline: none;
+                    border: 1px solid #bbb;
+                    padding: 10px 20px;
+                    border-radius: 20px;
+                    position: relative;
+                }
+            }
+        }
+    }
+
+    .authFormModel__formGroup input:invalid + label{
+        transform: translateY(0);
+    }
+    
+    .authFormModel__formGroup input:focus {
+        border-color: #2b96f1;
+        input + label {
+            color: #2b96f1;
+            transform: translateY(-20px);
+            display: none;
+        }
+    }
+
+    .authFormModel__overlay {
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(0, 0, 0, 0.817);
+        z-index: 3;
+    }
+}

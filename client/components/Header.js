@@ -1,8 +1,9 @@
 "use client"
 import Link from "next/link"
 import { FiMenu } from 'react-icons/fi'
+import { FaUser } from 'react-icons/fa'
 
-const Header = ({ toggleSidebar, isSidebarOpen }) => {
+const Header = ({ toggleSidebar, isSidebarOpen, toggleAuthForm }) => {
     return (
         <header className="layout__header">
             <div className={`header-container ${isSidebarOpen ? `layout__wrapper` :``}`}>
@@ -23,6 +24,22 @@ const Header = ({ toggleSidebar, isSidebarOpen }) => {
                         onClick={toggleSidebar}
                     >
                         <FiMenu size={30} style={{ cursor: 'pointer' }} />
+                    </div>
+
+                    <div className="header-container__buttons">
+                        <button 
+                            className="header-container__buttons__sign-up" 
+                            onClick={toggleAuthForm}
+                        >
+                            <span className="text">Sign up</span>
+                        </button>
+                        <button 
+                            className="header-container__buttons__login"
+                            onClick={toggleAuthForm}
+                        >
+                            <span className="icon"><FaUser size={10} color="#fff" /></span>
+                            <span className="text">Login</span>
+                        </button>
                     </div>
 
                     <div className="profile">
