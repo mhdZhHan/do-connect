@@ -18,12 +18,20 @@
     --border:.1rem solid rgba(255,255,255,.2);
 }
 
-$main_color: #16a085;
-$main_color_mint: #75bdad;
-$main_color_blue: #e5f8ff;
-$green:#3B685D;
+$main_color: #845ec2;
+$main_color_mint: #009efa;
+$main_color_text: #0b0051;
+$main__gradient: linear-gradient(128deg, #00d2fcc5 60%, #009efad7 100%);
+
+
 $light_color: var(--light_color);
 $light_bg: var(--light_bg);
 $black: var(--black);
 $white: var(--white);
 $border: var(--border);
+
+$green:#00c9a7;
+
+$box_shadow_01: rgba(17, 17, 26, 0.1) 0px 1px 0px;
+$card_shadow_01: rgba(99,99,99,.2) 0px 2px 8px 0px;
+$card_shadow_02: 0 8px 60px 0 rgba(103,151,255,.1),0 12px 90px 0 rgba(103, 237, 255, 0.1);

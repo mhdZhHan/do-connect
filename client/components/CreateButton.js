@@ -7,7 +7,7 @@ const CreateButton = () => {
             bottom: '2em',
             right: '2em',
             zIndex: '2',
-            background: 'linear-gradient(128deg, rgb(24, 226, 179) 60%, rgb(0, 212, 255) 100%)',
+            background: 'linear-gradient(128deg, #00d2fcc5 60%, #009efad7 100%)',
             borderColor: '#17e0b2',
             boxShadow: 'rgba(99,99,99,.2) 0px 2px 8px 0px',
             display: 'flex',
@@ -18,7 +18,7 @@ const CreateButton = () => {
         }}>
             <FaPlus size={25} color='#fff' />
             <span style={{
-                color: '#2e7d32',
+                color: '#0b0051',
                 fontWeight: 'bold',
                 textTransform: 'uppercase',
                 fontSize: '1.8rem',

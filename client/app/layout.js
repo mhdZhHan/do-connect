@@ -9,7 +9,6 @@ export default function RootLayout({ children }) {
 	const [windowWidth] = useState(window.innerWidth)
 
 	useEffect(() => {
-		console.log(windowWidth);
 		if(windowWidth < 763){
 			setIsSidebarOpen(true)
 		}
@@ -35,7 +34,7 @@ export default function RootLayout({ children }) {
 					<Sidebar isSidebarOpen={isSidebarOpen} />
 					<main className={`layout__main ${isSidebarOpen ? `layout__wrapper` :``}`}>{ children }</main>
 				</div>
-				{!isSidebarOpen || isAuthFormOpen && <div 
+				{!isSidebarOpen && <div 
 					className="layout__sidebar-overlay"
 					onClick={() => setIsSidebarOpen(true)}
 					>

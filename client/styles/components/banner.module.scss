@@ -2,10 +2,10 @@
 
 .banner_container {
     width: 100%;
-    padding: 3rem;
-    border-radius: .6rem;
-    background: linear-gradient(128deg, rgb(24, 226, 179) 70%, rgb(0, 212, 255) 100%);
-    box-shadow: rgba(99,99,99,.2) 0px 2px 8px 0px;
+    padding: 5rem 3rem;
+    border-radius: .8rem;
+    background: $main__gradient;
+    box-shadow: $card_shadow_01;
 }
 
 .banner_container__title {
@@ -13,8 +13,8 @@
     text-align: center;
     margin-bottom: 2rem;
     text-transform: uppercase;
-    font-weight: 700;
-    color: #37474f;
+    font-weight: bolder;
+    color: $main_color_text;
 }
 
 .banner_container__subtitle {
@@ -22,7 +22,7 @@
     font-size: 2rem;
     text-transform: uppercase;
     font-weight: 700;
-    color: #37474f;
+    color: $main_color_text;
     margin-bottom: 2rem;
 }
 
@@ -32,7 +32,8 @@
     margin: 0 auto;
     display: flex;
     background-color: $white;
-    padding: 2rem;
+    padding: 2rem 0;
+    padding-right: 2rem;
     border-radius: .8rem;
 }
 
@@ -41,4 +42,5 @@
     color: $black;
     font-size: 1.8rem;
     font-weight: 500;
+    padding: 0 2rem;
 }

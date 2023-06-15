@@ -11,23 +11,23 @@
     text-decoration: none;
 }
 
-*::selection {
-    background: $main_color;
-    color: $white;
-}
+// *::selection {
+//     background: $main_color;
+//     color: $white;
+// }
 
-*::-webkit-scrollbar {
-    height: 0.5rem;
-    width: 1rem;
-}
+// *::-webkit-scrollbar {
+//     height: 0.5rem;
+//     width: 1rem;
+// }
 
-*::-webkit-scrollbar-track {
-    background-color: transparent;
-}
+// *::-webkit-scrollbar-track {
+//     background-color: transparent;
+// }
 
-*::-webkit-scrollbar-thumb {
-    background-color: $main_color;
-}
+// *::-webkit-scrollbar-thumb {
+//     background-color: $main_color;
+// }
 
 ul, ol {
     list-style: none;
@@ -76,8 +76,15 @@ body {
     padding: 2rem;
 
     background-color: $main_color;
-    background-color: teal;
+    background-color: #845ec2;
     box-shadow: rgba(17, 17, 26, 0.1) 0px 1px 0px;
+
+    position: sticky;
+    top: 0;
+    left: 0;
+    right: 0;
+
+    z-index: 5;
 }
 
 .layout__sidebar {
@@ -90,8 +97,8 @@ body {
     overflow-y: auto;
     width: 25rem;
 
-    background-color: $light_bg;
-    box-shadow: 0 8px 60px 0 rgba(103,151,255,.1),0 12px 90px 0 rgba(133,255,103,.1);
+    background-color: $white;
+    box-shadow: $card_shadow_02;
 
     transform: translateX(0);
     transition: transform, width 0.2s linear;
@@ -105,6 +112,8 @@ body {
         left: 0;
         right: 0;
         bottom: 0;
+
+        z-index: 8;
     }
 }
 
@@ -122,6 +131,7 @@ body {
 
     @media all and (max-width: 763px){
         display: block;
+        z-index: 7;
     }
 }
 
@@ -221,8 +231,8 @@ body {
                 align-items: center;
                 justify-content: center;
 
-                background-color: #3b685d;
-                box-shadow: rgba(17, 17, 26, 0.1) 0px 1px 0px;
+                background-color: $main_color_mint;
+                box-shadow: $box_shadow_01;
 
                 padding: .7rem .8rem;
                 margin-right: 2rem;
@@ -234,7 +244,7 @@ body {
                     &.text {
                         font-size: 1.3rem;
                         font-weight: 600;
-                        color: $light_color;
+                        color: #fff;
                     }
                     &.icon {
                         margin-right: 0.8rem;
@@ -248,7 +258,7 @@ body {
         .profile {
             width: 4.5rem;
             height: 4.5rem;
-            background-color: #C78C50;
+            background-color: #ac5e00;
 
             display: flex;
             align-items: center;
@@ -256,7 +266,7 @@ body {
 
             border-radius: 50%;
             cursor: pointer;
-            box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+            box-shadow: $box_shadow_01;
             transition: all .25s;
             span {
                 font-size: 2rem;
@@ -280,10 +290,10 @@ body {
         width: 100%;
         margin-bottom: 2rem;
         border-radius: .4rem;
-        background-color: $light_bg;
+        background-color: $white;
         padding: .4rem;
         cursor: pointer;
-        box-shadow: 0px 2px 1px -1px rgba(0,0,0,.2),0px 1px 1px 0px rgba(0,0,0,.14),0px 1px 3px 0px rgba(0,0,0,.12);
+        box-shadow: $box_shadow_01;
         .sidebar-container__head__icon {
             margin-right: 1.3rem;
         }
