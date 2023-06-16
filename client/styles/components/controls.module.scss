@@ -1,0 +1,47 @@
+@use '../variables' as *;   
+
+.controlsContainer {
+    width: 100%;
+    .controlsContainer__options {
+        display: flex;
+        align-items: center;
+        .controlsContainer__item {
+            margin-right: 2rem;
+            padding: .7em 1.6rem;
+
+            border: .2rem dotted $white;
+            border-radius: .9rem;
+            background-color: $white;
+            box-shadow: $tocShadow;
+            cursor: pointer;
+
+            transition: all .3s ease-in;
+
+            display: flex;
+
+            &.hover {
+                &:hover {
+                    border-color: $main_color;
+                }
+            }
+
+            &.active {
+                background-color: $main_color;
+                color: $white;
+                border-color: $main_color;
+            }
+
+            &:last-child {
+                margin-right: 0;
+            }
+            .controlsContainer__label {
+                font-size: 1.8rem;
+                font-weight: 500;
+            }
+            .controlsContainer__arrowIcon {
+                margin-left: .5rem;
+                margin-top: 0.14rem;
+            }
+        }
+    }
+}

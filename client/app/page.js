@@ -1,14 +1,17 @@
 import { Banner } from "@/components"
+import ListControls from "@/components/common/listControls/ListControls"
 
 export const metadata = {
-	title: 'Doc Connect | Home',
-	description: 'Doc Connect community',
+	title: 'DoConnect | Home',
+	description: 'DoConnect. A community for doctors',
 }
 
 export default function Home() {
 	return (
 		<section id="home">
 			<Banner />
+			<div className="separator"></div>
+			<ListControls />
 		</section>	
 	)
 }
