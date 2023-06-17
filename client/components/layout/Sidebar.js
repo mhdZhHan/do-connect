@@ -2,7 +2,7 @@
 import Link from "next/link"
 import { useState } from "react"
 import { BiChevronDown, BiChevronRight } from 'react-icons/bi'
-import { FaLayerGroup, FaUser, FaEllipsisV } from 'react-icons/fa'
+import { FaLayerGroup, FaUser, FaUsers } from 'react-icons/fa'
 
 const Sidebar = ({ isSidebarOpen }) => {
     const [isCollapse, setIsCollapse] = useState([true, true, true])
@@ -40,9 +40,9 @@ const Sidebar = ({ isSidebarOpen }) => {
                             </Link></li>
                             <li><Link href="" className="sidebar-container__content__item">
                                 <span className="sidebar-container__content__prefix-icon">
-                                    <FaEllipsisV size={14} color="#909090" />
+                                    <FaUsers size={14} color="#909090" />
                                 </span>
-                                <span className="sidebar-container__content__text">More</span>
+                                <span className="sidebar-container__content__text">Groups</span>
                             </Link></li>
                         </ul>
                     )
