@@ -6,6 +6,7 @@ import { Header, Sidebar, Footer, CreateButton, AuthForm } from "@/components"
 export default function RootLayout({ children }) {
 	const [isSidebarOpen, setIsSidebarOpen] = useState(false)
 	const [isAuthFormOpen, setIsAuthFormOpen] = useState(false)
+	const [isSignUp, setIsSignUp] = useState(true)
 	const [windowWidth] = useState(window.innerWidth)
 
 	useEffect(() => {
@@ -18,8 +19,9 @@ export default function RootLayout({ children }) {
 	  setIsSidebarOpen(!isSidebarOpen)
 	}
 
-	const toggleAuthForm = () => {
+	const toggleAuthForm = (sigUpOrLogin) => {
 		setIsAuthFormOpen(!isAuthFormOpen)
+		setIsSignUp(sigUpOrLogin)
 	}
 
 	return (
@@ -30,17 +32,26 @@ export default function RootLayout({ children }) {
 						isSidebarOpen={isSidebarOpen} 
 						toggleSidebar={toggleSidebar} 
 						toggleAuthForm={toggleAuthForm}
+						isSignUp={isSignUp}
+						setIsSignUp={setIsSignUp}
 					/>
 					<Sidebar isSidebarOpen={isSidebarOpen} />
 					<main className={`layout__main ${isSidebarOpen ? `layout__wrapper` :``}`}>{ children }</main>
 				</div>
+
 				{!isSidebarOpen && <div 
 					className="layout__sidebar-overlay"
 					onClick={() => setIsSidebarOpen(true)}
 					>
 				</div>}
-				{isAuthFormOpen && <AuthForm toggleAuthForm={toggleAuthForm} />}
+
+				{isAuthFormOpen && <AuthForm 
+					toggleAuthForm={toggleAuthForm}
+					isSignUp={isSignUp}
+				 />}
+
 				<Footer />
+
 				<CreateButton />
 			</body>
 		</html>

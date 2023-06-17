@@ -13,56 +13,133 @@
     justify-content: center;
 
     .authFormModel__container {
+        position: relative;
+
         z-index: 4;
+        padding: 3rem;
+        width: 40rem;
+
         background: $white;
-        width: 50rem;
+
         display: flex;
         flex-direction: column;
-        padding: 3em 3em 2.5em;
+        border-radius: .5rem;
+
+        .authFormModel__closeBtn {
+            position: absolute;
+            top: 1.5rem;
+            right: 1.5rem;
+            cursor: pointer;
+        }
+
+        .authFormModel__container__welcome {
+            margin-bottom: 3rem;
+            margin-top: 2rem;
+            h2 {
+                font-size: 3rem;
+                margin-bottom: .5rem;
+                font-weight: 700;
+                display: flex;
+                align-items: center;
+                span {
+                    margin-left: 2rem;
+                    font-size: 2.8rem;
+                }
+            }
+            p {
+                font-size: 1.8rem;
+                color: $gray;
+                font-weight: 500;
+            }
+        }
 
         form {
             .authFormModel__formGroup {
                 position: relative;
-                line-height: 14px;
-                margin: 0 10px;
                 margin-bottom: 2rem;
+                width: 100%;
                 label {
-                    color: #bbb;
-                    font-size: 11px;
+                    font-size: 1.2rem;
                     text-transform: uppercase;
-                    position: absolute;
-                    z-index: 2;
-                    left: 20px;
-                    top: 14px;
-                    padding: 0 2px;
                     pointer-events: none;
-                    background: white;
+                    padding: 0 .3rem;
+                    background: $white;
+                    color: $gray;
+
+                    position: absolute;
+                    left: 2rem;
+                    top: 1.4rem;
+
+                    z-index: 2;
+
                     transition: transform 100ms ease;
                     transform: translateY(-20px);
                 }
                 input {
-                    font-size: 13px;
-                    color: #555;
+                    font-size: 1.5rem;
+                    color: $black;
                     outline: none;
-                    border: 1px solid #bbb;
-                    padding: 10px 20px;
-                    border-radius: 20px;
+                    border: .1rem solid $gray;
+                    padding: 1rem 2rem;
+                    border-radius: .5rem;
                     position: relative;
                 }
+                &.fullWidth {
+                    input {
+                        width: 100%;
+                    }
+                }
             }
-        }
-    }
 
-    .authFormModel__formGroup input:invalid + label{
-        transform: translateY(0);
-    }
+            .authFormModel__formGroup input:invalid + label{
+                transform: translateY(0);
+            }
+
+            .authFormModel__formGroup input:focus {
+                border-color: $main_color;
+                input + label {
+                    color: #2b96f1;
+                    transform: translateY(-20px);
+                    display: none;
+                }
+            }
+
+            .authFormModel__submitBtn {
+                button {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
     
-    .authFormModel__formGroup input:focus {
-        border-color: #2b96f1;
-        input + label {
-            color: #2b96f1;
-            transform: translateY(-20px);
-            display: none;
+                    background-color: $main_color;
+                    box-shadow: $box_shadow_01;
+    
+                    padding: .8rem 1rem;
+                    margin-right: 2rem;
+                    border-radius: .6rem;
+                    
+                    cursor: pointer;
+                    transition: all .25s;
+                    span {
+                        &.text {
+                            font-size: 1.6rem;
+                            font-weight: 600;
+                            color: #fff;
+                        }
+                        &.icon {
+                            margin-right: 0.8rem;
+                        }
+                    }
+                    &:hover {
+                        opacity: .8;
+                    }
+                }
+                &.fullWidth {
+                    width: 100%;
+                    button {
+                        width: 100%;
+                    }
+                }
+            }
         }
     }
 
