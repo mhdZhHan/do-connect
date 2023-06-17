@@ -2,6 +2,7 @@
 
 .controlsContainer {
     width: 100%;
+    user-select: none;
     .controlsContainer__options {
         display: flex;
         align-items: center;
