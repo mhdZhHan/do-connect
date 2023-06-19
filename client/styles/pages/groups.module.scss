@@ -1,0 +1,94 @@
+@use '../variables' as *;  
+
+.groupsContainer__head {
+    .groupsContainer__head__title {
+        font-size: 2rem;
+        font-weight: 600;
+        margin-bottom: 2rem;
+    }
+}
+.groupsContainer__groups {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    gap: 1.5rem;
+    align-items: stretch;
+    justify-content: center;
+}
+
+
+// groups card
+.cardContainer {
+    cursor: pointer;
+    transition: all .3s ease;
+
+    background: $white;
+    box-shadow: $card_shadow_01;
+
+    padding: 2rem 1.5rem;
+    margin-bottom: 2rem;
+
+    &:hover {
+        box-shadow: $hover_shadow;
+    }
+    .cardContainer__top {
+        display: flex;
+        align-items: center;
+        margin-bottom: 1.5rem;
+        .cardContainer__top__logo {
+            margin-right: 1.5rem;
+            img {
+                background-size: 40px;
+                height: 40px;
+                width: 40px;
+                border-radius: 50%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background-repeat: no-repeat;
+            }
+        }
+
+        .cardContainer__top__title {
+            word-break: break-word;
+            line-height: 1.2;
+            font-size: 1.5rem;
+            margin-right: 1.5rem;
+        }
+
+        .cardContainer__top__userCount {
+            display: flex;
+            align-items: center;
+            .userIcon {
+                margin-right: .5rem;
+                margin-top: 0.3rem;
+            }
+            .userCount {
+                font-size: 1.5rem;
+            }
+        }
+    }
+
+    .cardContainer__body {
+        .cardContainer__body__text {
+            word-break: break-word;
+            line-height: 1.3;
+            font-size: 1.5rem;
+            color: $gray;
+            margin-bottom: 1.5rem;
+        }
+        
+        .cardContainer__body__badge {
+            display: flex;
+            align-items: center;
+            .badge__icon {
+                margin-right: 1rem;
+                margin-top: 0.3rem;
+            }
+            .badge__text {
+                color: $gray;
+                font-size: 1.5rem;
+                font-weight: 600;
+            }
+        }
+    }
+}

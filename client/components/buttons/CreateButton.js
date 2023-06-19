@@ -1,6 +1,6 @@
 import { FaPlus } from 'react-icons/fa'
 
-const CreateButton = () => {
+const CreateButton = ({ btnText }) => {
     return (
         <button style={{
             position: 'fixed',
@@ -23,7 +23,7 @@ const CreateButton = () => {
                 textTransform: 'uppercase',
                 fontSize: '1.8rem',
                 marginLeft: '.6rem',
-            }}>New Topic</span>
+            }}>{btnText}</span>
         </button>
     )
 }

@@ -1,4 +1,4 @@
-import { Banner } from "@/components"
+import { Banner, CreateButton } from "@/components"
 import ListControls from "@/components/common/listControls/ListControls"
 
 export const metadata = {
@@ -12,6 +12,7 @@ export default function Home() {
 			<Banner />
 			<div className="separator"></div>
 			<ListControls />
+			<CreateButton btnText="New Topic" />
 		</section>	
 	)
 }

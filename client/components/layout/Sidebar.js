@@ -1,5 +1,6 @@
 "use client"
 import Link from "next/link"
+
 import { useState } from "react"
 import { BiChevronDown, BiChevronRight } from 'react-icons/bi'
 import { FaLayerGroup, FaUser, FaUsers } from 'react-icons/fa'
@@ -38,7 +39,7 @@ const Sidebar = ({ isSidebarOpen }) => {
                                 </span>
                                 <span className="sidebar-container__content__text">My Posts</span>
                             </Link></li>
-                            <li><Link href="" className="sidebar-container__content__item">
+                            <li><Link href="/groups" className="sidebar-container__content__item">
                                 <span className="sidebar-container__content__prefix-icon">
                                     <FaUsers size={14} color="#909090" />
                                 </span>
