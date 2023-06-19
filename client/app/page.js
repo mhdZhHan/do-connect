@@ -8,7 +8,7 @@ export const metadata = {
 
 export default function Home() {
 	return (
-		<section id="home">
+		<section id="homeScreen">
 			<Banner />
 			<div className="separator"></div>
 			<ListControls />
