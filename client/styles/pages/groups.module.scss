@@ -18,6 +18,8 @@
 
 // groups card
 .cardContainer {
+    display: block;
+    color: $black;
     cursor: pointer;
     transition: all .3s ease;
 

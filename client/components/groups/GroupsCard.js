@@ -1,9 +1,11 @@
+import Link from 'next/link'
 import { FaUser, FaBan } from 'react-icons/fa'
+
 import styles from '@/styles/pages/groups.module.scss'
 
 const GroupsCard = () => {
     return (
-        <div className={styles.cardContainer}>
+        <Link href="/groups/chat" className={styles.cardContainer}>
             <div className={styles.cardContainer__top}>
                 <div className={styles.cardContainer__top__logo}>
                     <img src="/assets/group-logo.png" alt="group_logo" />
@@ -30,7 +32,7 @@ const GroupsCard = () => {
                     <span className={styles.badge__text}>Closed</span>
                 </div>
             </div>
-        </div>
+        </Link>
     )
 }
 
