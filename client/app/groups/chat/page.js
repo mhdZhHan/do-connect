@@ -2,21 +2,31 @@
 import { useState } from 'react'
 
 import EmojiPicker from 'emoji-picker-react';
-import { FaBan, FaPaperPlane, FaSmile } from 'react-icons/fa'
+import { FaBan, FaPaperPlane } from 'react-icons/fa'
 import { FiSmile } from 'react-icons/fi'
+import { RiFullscreenFill, RiCloseFill } from 'react-icons/ri'
 
 import styles from '@/styles/pages/chat.module.scss'
 
 const Chat = () => {
     const [isClosed, setIsClosed] = useState(false)
     const [isEmojiPicker, setIsEmojiPicker] = useState(false)
+    const [isFullScreen, setIsFullScreen] = useState(false)
 
     const toggleEmojiPicker = () => {
         setIsEmojiPicker(!isEmojiPicker)
     }
 
+    const enableFullScreen = () => {
+        setIsFullScreen(true)
+    }
+
+    const disableFullScreen = () => {
+        setIsFullScreen(false)
+    }
+
     return (
-        <section id="id_chatScreen" className={styles.chatScreen}>
+        <section id="id_chatScreen" className={`${styles.chatScreen} ${isFullScreen ? styles.fullScreen : ''}`}>
             <div className={styles.chatScreenHeader}>
                 <div className={styles.chatScreenHeader__left}>
                     <img src="/assets/group-logo.png" alt="groupLogo" />
@@ -24,34 +34,80 @@ const Chat = () => {
                         Hello world research
                     </h3>
                 </div>
+
+                <div className={styles.chatScreenHeader__right}>
+                    <span 
+                        className={styles.fullScreenIcon}
+                    >
+                        {!isFullScreen ? (
+                            <RiFullscreenFill 
+                                size={24} color='#fff'
+                                onClick={enableFullScreen}
+                            />
+                        ): (
+                            <RiCloseFill 
+                                size={24} color='#fff' 
+                                onClick={disableFullScreen}
+                            />
+                        )}
+                    </span>
+                </div>
             </div>
 
             <div className={styles.chatScreen__chatContainer}>
-                <ul className={styles.chatScreen__chatContainer__leftChat}>
+                <ul className={styles.chatScreen__chatContainer__chats}>
                     <li className={styles.chatScreen__chatContainer__message}>
                         <span className={styles.message__text}>Hello guys!</span>
                     </li>
 
-                    {/* <li className={styles.chatScreen__chatContainer__message}>
-                        <span className={styles.message__text}>Whatsapp guys</span>
+                    <li className={styles.chatScreen__chatContainer__message}>
+                        <span className={styles.message__text}>what's up guys</span>
                     </li>
 
                     <li className={styles.chatScreen__chatContainer__message}>
                         <span className={styles.message__text}>This is for helloworld research</span>
-                    </li> */}
-                </ul>
+                    </li>
 
-                <ul className={styles.chatScreen__chatContainer__rightChat}>
-                    <li className={styles.chatScreen__chatContainer__message}>
+                    <li className={`${styles.chatScreen__chatContainer__message} ${styles.userMessage}`}>
                         <span className={styles.message__text}>Hii all</span>
                     </li>
-                    <li className={styles.chatScreen__chatContainer__message}>
+
+                    <li className={`${styles.chatScreen__chatContainer__message} ${styles.userMessage}`}>
                         <span className={styles.message__text}>how are you brother</span>
                     </li>
-                    <li className={styles.chatScreen__chatContainer__message}>
+
+                    <li className={`${styles.chatScreen__chatContainer__message} ${styles.userMessage}`}>
                         <span className={styles.message__text}>Why this group</span>
                     </li>
+
+                    <li className={`${styles.chatScreen__chatContainer__message} ${styles.userMessage}`}>
+                        <span className={styles.message__text}>What you mean by hello world research</span>
+                    </li>
                     <li className={styles.chatScreen__chatContainer__message}>
+                        <span className={styles.message__text}>Hello guys!</span>
+                    </li>
+
+                    <li className={styles.chatScreen__chatContainer__message}>
+                        <span className={styles.message__text}>what's up guys</span>
+                    </li>
+
+                    <li className={styles.chatScreen__chatContainer__message}>
+                        <span className={styles.message__text}>This is for helloworld research</span>
+                    </li>
+
+                    <li className={`${styles.chatScreen__chatContainer__message} ${styles.userMessage}`}>
+                        <span className={styles.message__text}>Hii all</span>
+                    </li>
+
+                    <li className={`${styles.chatScreen__chatContainer__message} ${styles.userMessage}`}>
+                        <span className={styles.message__text}>how are you brother</span>
+                    </li>
+
+                    <li className={`${styles.chatScreen__chatContainer__message} ${styles.userMessage}`}>
+                        <span className={styles.message__text}>Why this group</span>
+                    </li>
+
+                    <li className={`${styles.chatScreen__chatContainer__message} ${styles.userMessage}`}>
                         <span className={styles.message__text}>What you mean by hello world research</span>
                     </li>
                 </ul>
