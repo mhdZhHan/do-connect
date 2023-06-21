@@ -11,13 +11,12 @@ export default function RootLayout({ children }) {
 	const [isSignUp, setIsSignUp] = useState(true)
 
 	const { width } = useWindowResize()
-	const [windowWidth] = useState(width)
 
-	useEffect(() => {		
-		if(windowWidth < 763){
+	useEffect(() => {
+		if(width < 763){
 			setIsSidebarOpen(true)
 		}
-	}, [])
+	}, [width])
 
 	const toggleSidebar = () => {
 	  setIsSidebarOpen(!isSidebarOpen)
