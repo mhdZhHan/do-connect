@@ -7,9 +7,11 @@ export default function RootLayout({ children }) {
 	const [isSidebarOpen, setIsSidebarOpen] = useState(false)
 	const [isAuthFormOpen, setIsAuthFormOpen] = useState(false)
 	const [isSignUp, setIsSignUp] = useState(true)
-	const [windowWidth] = useState(window.innerWidth)
+	const [windowWidth, setWindowWidth] = useState(0)
 
 	useEffect(() => {
+		setWindowWidth(window.innerWidth)
+		
 		if(windowWidth < 763){
 			setIsSidebarOpen(true)
 		}
