@@ -1,5 +1,6 @@
 "use client"
 import { useEffect, useState } from 'react'
+
 import '@/styles/global.scss'
 import { Header, Sidebar, Footer, AuthForm } from "@/components"
 import { useWindowResize } from '@/hooks'
@@ -12,9 +13,7 @@ export default function RootLayout({ children }) {
 	const { width } = useWindowResize()
 	const [windowWidth] = useState(width)
 
-	useEffect(() => {
-		// setWindowWidth(window.innerWidth)
-		
+	useEffect(() => {		
 		if(windowWidth < 763){
 			setIsSidebarOpen(true)
 		}
