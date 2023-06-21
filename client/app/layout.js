@@ -2,15 +2,18 @@
 import { useEffect, useState } from 'react'
 import '@/styles/global.scss'
 import { Header, Sidebar, Footer, AuthForm } from "@/components"
+import { useWindowResize } from '@/hooks'
 
 export default function RootLayout({ children }) {
 	const [isSidebarOpen, setIsSidebarOpen] = useState(false)
 	const [isAuthFormOpen, setIsAuthFormOpen] = useState(false)
 	const [isSignUp, setIsSignUp] = useState(true)
-	const [windowWidth, setWindowWidth] = useState(0)
+
+	const { width } = useWindowResize()
+	const [windowWidth] = useState(width)
 
 	useEffect(() => {
-		setWindowWidth(window.innerWidth)
+		// setWindowWidth(window.innerWidth)
 		
 		if(windowWidth < 763){
 			setIsSidebarOpen(true)
