@@ -19,6 +19,8 @@
             transition: all .3s ease-in;
 
             display: flex;
+            align-items: center;
+            justify-content: center;
 
             &.hover {
                 &:hover {
@@ -36,12 +38,16 @@
                 margin-right: 0;
             }
             .controlsContainer__label {
+                display: block;
                 font-size: 1.8rem;
                 font-weight: 500;
             }
             .controlsContainer__arrowIcon {
+                display: block;
                 margin-left: .5rem;
-                margin-top: 0.14rem;
+                svg {
+                    display: block;
+                }
             }
         }
     }

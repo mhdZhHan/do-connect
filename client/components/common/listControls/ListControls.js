@@ -21,7 +21,7 @@ const ListControls = () => {
                 >
                     <span className={styles.controlsContainer__label}>all categories</span>
                     <span className={styles.controlsContainer__arrowIcon}>
-                        {isCollapse[0] ? <BiChevronRight size={20} /> : <BiChevronDown size={20}/>}
+                        {isCollapse[0] ? <BiChevronRight size={'2rem'} /> : <BiChevronDown size={20}/>}
                     </span>
                 </li>
 
@@ -31,15 +31,15 @@ const ListControls = () => {
                 >
                     <span className={styles.controlsContainer__label}>all tags</span>
                     <span className={styles.controlsContainer__arrowIcon}>
-                        {isCollapse[1] ? <BiChevronRight size={20} /> : <BiChevronDown size={20}/>}
+                        {isCollapse[1] ? <BiChevronRight size={'2rem'} /> : <BiChevronDown size={20}/>}
                     </span>
                 </li>
 
-                <li className={`${styles.controlsContainer__item} ${styles.hover} ${styles.active}`}>
+                <li className={`${styles.controlsContainer__item} ${styles.hover}`}>
                     <span className={styles.controlsContainer__label}>Latest</span>
                 </li>
 
-                <li className={`${styles.controlsContainer__item} ${styles.hover}`}>
+                <li className={`${styles.controlsContainer__item} ${styles.hover} ${styles.active}`}>
                     <span className={styles.controlsContainer__label}>Top</span>
                 </li>
             </ul>
