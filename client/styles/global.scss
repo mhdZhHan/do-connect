@@ -134,6 +134,7 @@ body {
     background-color: rgba(0, 0, 0, 0.5);
     z-index: 2;
     display: none;
+    overflow: hidden;
 
     @media all and (max-width: 763px){
         display: block;
@@ -243,7 +244,7 @@ body {
                 padding: .7rem .8rem;
                 margin-right: 2rem;
                 border-radius: .6rem;
-                
+
                 cursor: pointer;
                 transition: all .25s;
                 span {
@@ -291,7 +292,7 @@ body {
     user-select: none;
     .sidebar-container__head {
         display: flex;
-        align-items: center;
+        // align-items: center;
 
         width: 100%;
         margin-bottom: 2rem;
