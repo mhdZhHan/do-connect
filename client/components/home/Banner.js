@@ -5,10 +5,10 @@ function HomeBanner() {
     return (
         <div className={styles.banner_container}>
             <h1 className={styles.banner_container__title}>
-                Welcome to our community
+                Welcome!
             </h1>
             <h2 className={styles.banner_container__subtitle}>
-                Welcome! Please search before posting
+                Please search before posting
             </h2>
             <div className={styles.banner_container__search_box}>
                 <input 
